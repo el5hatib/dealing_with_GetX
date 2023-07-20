@@ -2,8 +2,8 @@ import 'package:dealing_with_getx/controller/homecontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 class Home extends StatelessWidget {
-  const Home({super.key});
-
+   Home({super.key});
+final HomeController controller = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,10 +13,7 @@ class Home extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          GetX<HomeController>(
-             init: HomeController(),
-              builder: (controller) {
-            return Row(
+          Obx(() =>Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
@@ -44,8 +41,8 @@ class Home extends StatelessWidget {
                   icon: const CircleAvatar(child: Icon(Icons.remove)),
                 ),
               ],
-            );
-          }),
+            ),
+    ),
         ],
       ),
     );
