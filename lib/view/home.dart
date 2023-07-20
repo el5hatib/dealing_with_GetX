@@ -48,7 +48,7 @@ final HomeController controller = Get.put(HomeController());
     );
   }
 }
-// Diffrence between GETX obs , GetBuilder and Obx
+// Difference between GETX obs , GetBuilder and Obx
 /*
 *  GetX is a reactive state manager. It is the easiest way to manage your state and inject it into your widgets.
 * GetX is a mix between reactive state manager and stateless widgets, with reactive approach.
